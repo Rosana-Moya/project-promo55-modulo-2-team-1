@@ -1,2 +1,5 @@
 @use '../core/variables' as vars;
 
+.main-page {
+    font-family: vars.$font-main;
+}
