@@ -1,6 +1,6 @@
 # Invite Me Project 🚀
 
-![Logo Invite Me]()
+![Logo Invite Me](./public/images/favicon_inviteme2.png)
 
 ## Descripción
 
