@@ -3,3 +3,110 @@
 .main-page {
     font-family: vars.$font-main;
 }
+
+body {
+  background: #f8f8f8;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+  max-width: 400px;
+}
+
+.hero__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.hero__icon {
+  margin-bottom: 8px;
+}
+
+.hero__title {
+  font-size: 2.2rem;
+  color: #2A7C7C;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Pacifico', cursive, Arial, sans-serif;
+}
+
+.hero__subtitle {
+  color: #e67c2f;
+  font-size: 1.2rem;
+  margin: 12px 0 4px 0;
+  font-weight: 600;
+}
+
+.hero__desc {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.hero__steps {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #2A7C7C;
+  font-weight: 500;
+}
+
+.step svg {
+  margin-bottom: 4px;
+}
+
+.hero__btn {
+  background: #2A7C7C;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: background 0.2s;
+}
+
+.hero__btn:hover {
+  background: #1e5c5c;
+}
+
+.hero__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  border-top: 1px solid #eaeaea;
+  padding-top: 12px;
+  margin-top: 24px;
+}
+
+.footer__brand {
+  font-weight: 700;
+  color: #2A7C7C;
+  letter-spacing: 1px;
+}
