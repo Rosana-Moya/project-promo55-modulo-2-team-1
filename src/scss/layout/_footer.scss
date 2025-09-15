@@ -1,4 +1,66 @@
 @use '../core/variables' as vars;
 
-@use './footer'
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.footer__top {
+  margin-bottom: 20px;
+}
+
+.footer__brand {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.footer__team {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-member span {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover img {
+  opacity: 0.7;
+}
+
+/* Responsive para pantallas grandes (opcional) */
+@media (min-width: 600px) {
+  .footer__team {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .team-member {
+    align-items: center;
+  }
+}
 

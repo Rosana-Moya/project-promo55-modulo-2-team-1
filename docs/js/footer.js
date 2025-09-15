@@ -2,5 +2,5 @@
 
 console.log(">> Ready :)");
 
-import "./footer";
+
 
