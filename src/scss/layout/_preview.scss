@@ -14,6 +14,11 @@
     background-color: #EDE2D5;
     height: 400px;
     width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
 }
 
 .preview-container.autum {
@@ -28,6 +33,8 @@
 }
 .preview-container.fun {
     background-image: url(../images/preview_fun_background.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    height: 300px;
 }

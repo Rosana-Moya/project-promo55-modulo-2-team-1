@@ -19,3 +19,14 @@ design.addEventListener ("change", (event) => {
 
     }
 })
+const inputName = document.querySelector(".form__input");   //solo para probar cómo escuchar el form - sin mergear no tengo acceso
+const hostName = document.querySelector(".preview__host-name");
+const eventDate = document.querySelector(".preview__event-day");
+const message = document.querySelector(".preview__message");
+
+console.log(inputName);
+console.log(hostName);
+
+inputName.addEventListener("input", (event) => {
+    hostName.textContent = event.target.value;
+})
