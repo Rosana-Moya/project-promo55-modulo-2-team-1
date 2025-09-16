@@ -22,24 +22,6 @@
     font-weight: 900;
 }
 
-.preview-container.autum {
-    background-image: url(../images/preview_autum_background.png);
-    background-size: cover;
-    background-position: center;
-}
-.preview-container.minimal {
-    background-image: url(../images/preview_minimal-birds_background.png);
-    background-size: cover;
-    background-position: center;
-}
-.preview-container.fun {
-    background-image: url(../images/preview_fun_background.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 300px;
-}
-
 .preview__main {
     display: flex;
     flex-direction: column;
