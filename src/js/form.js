@@ -23,3 +23,12 @@ const inputPhoto = document.getElementById("photo");
 const downloadButton = document.querySelector(".js-download");
 const resetButton = document.querySelector(".js-reset");
 const formSubmitButton = document.querySelector(".js-create");
+
+
+// Gestiona abrir/cerrar de los colapsables 
+collapsibleHeaders.forEach(header => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle("active");
+  });
+});
