@@ -12,8 +12,8 @@
     font-family: vars.$font-main;
     border: solid;
     background-color: #EDE2D5;
-    height: 200px;
-    width: 400px;
+    height: 400px;
+    width: 600px;
 }
 
 .preview-container.autum {
@@ -22,9 +22,8 @@
     background-position: center;
 }
 .preview-container.minimal {
-    background-image: url(../images/preview_minimal-birds2_background.png);
-    background-size:contain;
-    background-repeat: no-repeat;
+    background-image: url(../images/preview_minimal-birds_background.png);
+    background-size: cover;
     background-position: center;
 }
 .preview-container.fun {

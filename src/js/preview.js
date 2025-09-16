@@ -4,7 +4,7 @@ console.log("ready preview");
 const preview = document.querySelector(".preview-container");
 const design = document.querySelector(".preview__chosen-style");
 
-const designClasses = ["autum", "minimal", "fun"];
+const designClasses = ["autum", "minimal", "minimalSerius", "fun"];
 
 design.addEventListener ("change", (event) => {
     const selectDesign = event.target.value;
