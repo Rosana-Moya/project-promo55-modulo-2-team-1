@@ -1,0 +1,34 @@
+@use '../core/variables' as vars;
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 30px;
+}
+.preview-container {
+    font-family: vars.$font-main;
+    border: solid;
+    background-color: #EDE2D5;
+    height: 200px;
+    width: 400px;
+}
+
+.preview-container.autum {
+    background-image: url(../images/preview_autum_background.png);
+    background-size: cover;
+    background-position: center;
+}
+.preview-container.minimal {
+    background-image: url(../images/preview_minimal-birds_background.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.preview-container.fun {
+    background-image: url(../images/preview_fun_background.png);
+    background-size: cover;
+    background-position: center;
+}
