@@ -32,3 +32,4 @@ collapsibleHeaders.forEach(header => {
     content.classList.toggle("active");
   });
 });
+
