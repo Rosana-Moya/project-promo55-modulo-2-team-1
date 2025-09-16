@@ -19,14 +19,16 @@ design.addEventListener ("change", (event) => {
 
     }
 })
-const inputName = document.querySelector(".form__input");   //solo para probar cómo escuchar el form - sin mergear no tengo acceso
-const hostName = document.querySelector(".preview__host-name");
-const eventDate = document.querySelector(".preview__event-day");
-const message = document.querySelector(".preview__message");
-
-console.log(inputName);
-console.log(hostName);
+const inputName = document.getElementById("name");   //solo para probar cómo escuchar el form - sin mergear no tengo acceso
+const inputDate = document.getElementById("date");
+const hostName = document.querySelector(".preview-main__host-name");
+const message = document.querySelector(".preview-main__message");
+const eventDate = document.querySelector(".preview__event-date");
 
 inputName.addEventListener("input", (event) => {
     hostName.textContent = event.target.value;
+})
+
+inputDate.addEventListener("input", (event) => {
+    eventDate.textContent = event.target.value;
 })
