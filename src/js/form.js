@@ -55,6 +55,11 @@ styleSelect.addEventListener("change", () => {
     imgElement.src = `./images/${selectedStyle}/${img}`; // 👈 asegúrate de que la ruta coincide con tu carpeta
     imgElement.alt = selectedStyle;
     imgElement.classList.add("background-option");
+    
+    imgElement.addEventListener("click", () => {                  //TANIA:he añadido este evento para que el fondo elegido se pinte también en preview
+      preview.style.backgroundImage = `url(${imgElement.src})`;
+    });
+
     backgroundsContainer.appendChild(imgElement);
   });
 });
