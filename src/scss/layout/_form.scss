@@ -1,8 +1,9 @@
 /* ------------------------------
-   FORMULARIO (MOBILE FIRST)
+   FORMULARIO Y DISEÑO
 ------------------------------ */
-
-.form {
+.form,
+.design,
+.share {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -10,21 +11,24 @@
   margin: 0 auto;
 }
 
-.form__group {
+.form__group,
+.design__group {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  gap: 8px;
 }
 
-.form__label {
+.form__label,
+.design__label {
   font-weight: 600;
-  margin-bottom: 4.8px;
   font-size: 14px;
-  font-weight: 500;
   text-align: left;
 }
 
-.form__input {
+.form__input,
+.design__select,
+input[type="range"],
+input[type="color"] {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -32,8 +36,10 @@
   width: 100%;
 }
 
-.form__button {
-  background-color: #0077ff;
+/* Botón genérico */
+.form__button,
+.share__button {
+  background-color: #2A7C7C;
   color: #fff;
   padding: 8px 20px;
   border: none;
@@ -45,35 +51,87 @@
   align-self: center;
 }
 
-.form__button:hover {
-  background-color: #005fcc;
+.form__button:hover,
+.share__button:hover {
+  background-color: #236666;
+}
+
+/* Fondos */
+.design__backgrounds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.design__backgrounds img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.design__backgrounds img:hover,
+.design__backgrounds img.active {
+  border-color: #236666;
+}
+
+/* ------------------------------
+   COLLAPSIBLES
+------------------------------ */
+.collapsible {
+  margin: 16px auto;
+  max-width: 90%;
+}
+
+.collapsible__header {
+  width: 100%;
+  background-color: #f0f0f0;
+  border: none;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.collapsible__content {
+  margin-top: 12px;
+  display: none; /* Oculto por defecto */
+}
+
+.collapsible__content.active {
+  display: block;
 }
 
 /* ------------------------------
    MEDIA QUERIES
 ------------------------------ */
-/* Tablet */
-
 @media (min-width: 768px) {
-  .form {
+  .form,
+  .design,
+  .share {
     max-width: 500px;
-    margin: 0 auto;
   }
 
-.form__label {
+  .form__label,
+  .design__label {
     font-size: 16px;
   }
 }
 
-/* Desktop */
-
 @media (min-width: 1200px) {
-  .form {
+  .form,
+  .design,
+  .share {
     max-width: 800px;
-    margin: 0 auto;
   }
 
-.form__label {
-    font-size: 17.6px;
+  .form__label,
+  .design__label {
+    font-size: 18px;
   }
 }

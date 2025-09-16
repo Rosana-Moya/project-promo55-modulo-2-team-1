@@ -1,50 +1,118 @@
-<form class="form">
+<!-- Sección: Rellena -->
+<section class="collapsible">
+  <button class="collapsible__header">Rellena</button>
+  <div class="collapsible__content">
+    <form class="form">
+      <!-- Grupo: Nombre -->
       <div class="form__group">
-        <label for="name" class="form__label">Nombre:</label>
-        <input type="text" id="name" name="name" class="form__input" />
+        <label for="name" class="form__label">Nombre</label>
+        <input type="text" id="name" class="form__input" placeholder="Destinatario" />
+      </div>
+      <!-- Grupo: Mensaje -->
+      <div class="form__group">
+        <label for="message" class="form__label">Mensaje</label>
+        <input type="text" id="message" class="form__input" placeholder="Te invito a..." />
       </div>
 
+      <!-- Grupo: Email -->
       <div class="form__group">
-        <label for="email" class="form__label">Correo electrónico:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="form__input"
-          required
-        />
+        <label for="email" class="form__label">Correo electrónico</label>
+        <input type="email" id="email" class="form__input" required placeholder="correo electrónico"/>
       </div>
 
+      <!-- Grupo: Teléfono -->
       <div class="form__group">
-        <label for="phone" class="form__label">Teléfono:</label>
-        <input type="tel" id="phone" name="phone" class="form__input" />
+        <label for="phone" class="form__label">Teléfono</label>
+        <input type="tel" id="phone" class="form__input" placeholder="Número de telefono"/>
       </div>
 
+      <!-- Grupo: Fecha -->
       <div class="form__group">
-        <label for="date" class="form__label">Fecha:</label>
-        <input type="date" id="date" name="date" class="form__input" />
+        <label for="date" class="form__label">Fecha</label>
+        <input type="date" id="date" class="form__input" placeholder="Fecha del evento" />
       </div>
 
+      <!-- Grupo: Dirección -->
       <div class="form__group">
-        <label for="attendees" class="form__label">Número de asistentes:</label>
-        <input
-          type="number"
-          id="attendees"
-          name="attendees"
-          class="form__input"
-          min="1"
-        />
-      </div>
-      <div class="form__group">
-        <label for="photo" class="form__label">Foto:</label>
-        <input
-          type="file"
-          id="photo"
-          name="photo"
-          class="form__input"
-          accept="image/*"
-        />
+        <label for="address" class="form__label">Dirección</label>
+        <input type="text" id="address" class="form__input" placeholder="Dirección del evento"/>
       </div>
 
-      <button type="submit" class="form__button">Crear tarjeta</button>
+      <!-- Grupo: Foto -->
+      <div class="form__group">
+        <label for="photo" class="form__label">Foto</label>
+        <input type="file" id="photo" class="form__input" accept="image/*" placeholder="Añade una imagen" />
+      </div>
     </form>
+  </div>
+</section>
+
+<!-- Sección: Diseña -->
+<section class="collapsible">
+  <button class="collapsible__header">Diseña</button>
+  <div class="collapsible__content design">
+    <!-- Estilo -->
+    <div class="design__group">
+      <label for="style" class="design__label">Elige un estilo</label>
+      <select id="style" class="design__select">
+        <option value="">-- Selecciona --</option>
+        <option value="boda">Boda</option>
+        <option value="baby">Baby shower</option>
+        <option value="cumple">Cumpleaños</option>
+        <option value="networking">Networking</option>
+      </select>
+    </div>
+
+    <!-- Fondos -->
+    <div class="design__group">
+      <span class="design__label">Fondos disponibles</span>
+      <div class="design__backgrounds js-backgrounds"></div>
+    </div>
+
+    <!-- Tipografía -->
+    <div class="design__group">
+      <label for="font" class="design__label">Tipografía</label>
+      <select id="font" class="design__select js-font">
+        <option value="Nunito">Nunito</option>
+        <option value="Dancing Script">Dancing Script</option>
+        <option value="Roboto">Roboto</option>
+      </select>
+    </div>
+
+    <!-- Tamaño texto -->
+    <div class="design__group">
+      <label for="fontSize" class="design__label">Tamaño texto</label>
+      <input
+        type="range"
+        id="fontSize"
+        min="12"
+        max="36"
+        value="16"
+        class="js-font-size"
+      />
+    </div>
+
+    <!-- Color texto -->
+    <div class="design__group">
+      <label for="fontColor" class="design__label">Color texto</label>
+      <input
+        type="color"
+        id="fontColor"
+        value="#000000"
+        class="js-font-color"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Comparte -->
+<section class="collapsible">
+  <button class="collapsible__header">Comparte</button>
+  <div class="collapsible__content share">
+    <button type="submit" class="share__button js-create">Crear tarjeta</button>
+    <button class="share__button js-download">Descargar invitación</button>
+    <button class="share__button js-reset">Resetear</button>
+  </div>
+</section>
+
+<!-- Vista previa -->
