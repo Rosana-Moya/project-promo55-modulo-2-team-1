@@ -1,0 +1,53 @@
+@use '../core/variables' as vars;
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 30px;
+}
+.preview-container {
+    font-family: vars.$font-main;
+    border: solid;
+    border-radius: 10px;
+    background-color: #EDE2D5;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.preview-container.autum {
+    background-image: url(../images/preview_autum_background.png);
+    background-size: cover;
+    background-position: center;
+}
+.preview-container.minimal {
+    background-image: url(../images/preview_minimal-birds_background.png);
+    background-size: cover;
+    background-position: center;
+}
+.preview-container.fun {
+    background-image: url(../images/preview_fun_background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+.preview__main {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.preview__data {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+}

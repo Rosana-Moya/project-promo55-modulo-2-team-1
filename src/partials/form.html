@@ -1,0 +1,50 @@
+<form class="form">
+      <div class="form__group">
+        <label for="name" class="form__label">Nombre:</label>
+        <input type="text" id="name" name="name" class="form__input" />
+      </div>
+
+      <div class="form__group">
+        <label for="email" class="form__label">Correo electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form__input"
+          required
+        />
+      </div>
+
+      <div class="form__group">
+        <label for="phone" class="form__label">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" class="form__input" />
+      </div>
+
+      <div class="form__group">
+        <label for="date" class="form__label">Fecha:</label>
+        <input type="date" id="date" name="date" class="form__input" />
+      </div>
+
+      <div class="form__group">
+        <label for="attendees" class="form__label">Número de asistentes:</label>
+        <input
+          type="number"
+          id="attendees"
+          name="attendees"
+          class="form__input"
+          min="1"
+        />
+      </div>
+      <div class="form__group">
+        <label for="photo" class="form__label">Foto:</label>
+        <input
+          type="file"
+          id="photo"
+          name="photo"
+          class="form__input"
+          accept="image/*"
+        />
+      </div>
+
+      <button type="submit" class="form__button">Crear tarjeta</button>
+    </form>
