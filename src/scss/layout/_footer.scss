@@ -1,11 +1,20 @@
 @use '../core/variables' as vars;
 
 .footer {
-  background-color: #f5dccb;
+  background: linear-gradient(90deg, #2A7C7C 60%, #e67c2f 100%);
   padding: 20px;
   font-size: 14px;
-  color: #333;
+  color: #fff; // Cambiado de #333 a #fff para mejor contraste
   text-align: center;
+}
+
+.footer__brand,
+.team-member span {
+  color: #fff; // Asegura que los nombres sean visibles
+}
+
+.social-icons img {
+  filter: drop-shadow(0 0 2px #fff); // Resalta los iconos sobre fondo oscuro
 }
 
 .footer__top {
@@ -68,4 +77,3 @@
   font-size: 25px;
 }
 }
-

@@ -1,31 +1,10 @@
 'use strict'
 console.log("ready preview");
 
-const preview = document.querySelector(".preview-container");
-const design = document.querySelector(".preview__chosen-style");
+const preview = document.querySelector(".preview");
+const previewMain = document.querySelector(".preview__main");
 
-const designClasses = ["autum", "minimal", "minimalSerius", "fun"];
-
-design.addEventListener ("change", (event) => {
-    const selectDesign = event.target.value;
-    preview.classList.remove(...designClasses);
-    switch (selectDesign) {
-        case "autum": preview.classList.add ("autum");
-        break;
-        case "minimal": preview.classList.add ("minimal");
-        break;
-        case "fun": preview.classList.add ("fun");
-        break;
-
-    }
-})
-const inputName = document.getElementById("name");   
-const inputMessage = document.getElementById("message");
-const inputEmail = document.getElementById("email");
-const inputPhone = document.getElementById("phone");
-const inputDate = document.getElementById("date");
-const inputAddress = document.getElementById("address");
-const inputPhoto = document.getElementById("photo");
+//ESCUCHADORAS DE "RELLENA"
 
 const hostName = document.querySelector(".preview-main__host-name");
 const message = document.querySelector(".preview-main__message");
@@ -34,8 +13,7 @@ const hostMail = document.querySelector(".preview__mail");
 const hostPhone = document.querySelector(".preview__phone");
 const hostAddress = document.querySelector(".preview__address");
 
-
-
+const fontSlider = document.querySelector(".js-font-size");
 
 inputName.addEventListener("input", (event) => {
     hostName.textContent = event.target.value;
@@ -43,7 +21,20 @@ inputName.addEventListener("input", (event) => {
 inputMessage.addEventListener("input", (event) => {
     message.textContent = event.target.value;
 })
-
 inputDate.addEventListener("input", (event) => {
     eventDate.textContent = event.target.value;
 })
+inputEmail.addEventListener("input", (event) => {
+    hostMail.textContent = event.target.value;
+})
+inputPhone.addEventListener("input", (event) => {
+    hostPhone.textContent = event.target.value;
+})
+inputAddress.addEventListener("input", (event) => {
+    hostAddress.textContent = event.target.value;
+})
+
+fontSlider.addEventListener("input", () => {
+    const newSize = fontSlider.value;
+    previewMain.style.fontSize = newSize + "px";
+});

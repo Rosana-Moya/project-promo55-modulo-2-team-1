@@ -1,1 +1,61 @@
 @use '../core/variables' as vars;
+
+
+.hero__header {
+  background: linear-gradient(90deg, #2A7C7C 60%, #e67c2f 100%);
+  padding: 24px 0 18px 0;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.header__icon {
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__title {
+  color: #fff;
+  font-family: 'nunito';
+  font-size: 2.2rem;
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.header__desc {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header__content {
+    gap: 10px;
+  }
+  .hero__title {
+    font-size: 1.4rem;
+  }
+  .header__icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  .hero__header {
+    padding: 16px 0 10px 0;
+  }
+};
