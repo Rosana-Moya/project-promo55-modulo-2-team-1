@@ -39,9 +39,10 @@ input[type="color"] {
 /* Botón genérico */
 .form__button,
 .share__button {
-  background-color: #2A7C7C;
+  background-color: #2a7c7c;
   color: #fff;
   padding: 8px 20px;
+  margin: 15px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -51,6 +52,15 @@ input[type="color"] {
   align-self: center;
 }
 
+.content__share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// .js-create {
+//   display: block;
+//   margin: 0 auto;
+// }
 .form__button:hover,
 .share__button:hover {
   background-color: #236666;
