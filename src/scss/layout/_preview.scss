@@ -4,6 +4,14 @@
     display: flex;
     justify-content: center;
 }
+
+.photo-up{
+width: 20px;
+height: auto;
+border-radius: 5px;
+background-color: red;
+}
+
 .preview {
     display: flex;
     flex-direction: column;
