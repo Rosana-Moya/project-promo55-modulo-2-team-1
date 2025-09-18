@@ -2,6 +2,7 @@
 console.log("ready preview");
 
 const preview = document.querySelector(".preview");
+const previewMain = document.querySelector(".preview__main");
 
 //ESCUCHADORAS DE "RELLENA"
 
@@ -11,6 +12,8 @@ const eventDate = document.querySelector(".preview__event-date");
 const hostMail = document.querySelector(".preview__mail");
 const hostPhone = document.querySelector(".preview__phone");
 const hostAddress = document.querySelector(".preview__address");
+
+const fontSlider = document.querySelector(".js-font-size");
 
 inputName.addEventListener("input", (event) => {
     hostName.textContent = event.target.value;
@@ -31,3 +34,7 @@ inputAddress.addEventListener("input", (event) => {
     hostAddress.textContent = event.target.value;
 })
 
+fontSlider.addEventListener("input", () => {
+    const newSize = fontSlider.value;
+    previewMain.style.fontSize = newSize + "px";
+});
