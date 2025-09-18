@@ -18,13 +18,13 @@
 }
 
 .footer__top {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .footer__brand {
   display: block;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 4px;
 }
 
@@ -43,7 +43,7 @@
 
 .team-member span {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .social-icons {
@@ -71,5 +71,9 @@
   .team-member {
     align-items: center;
   }
-}
 
+  .team-member span {
+  font-weight: bold;
+  font-size: 25px;
+}
+}
