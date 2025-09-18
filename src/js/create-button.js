@@ -16,5 +16,8 @@ createButton.addEventListener("click", (e) => {
         link.download = 'my-image-name.jpeg';
         link.href = dataUrl;
         link.click();
+    })
+    .catch((err) => {
+        console.error("Error creando la imagen:", err);
     });
 });
