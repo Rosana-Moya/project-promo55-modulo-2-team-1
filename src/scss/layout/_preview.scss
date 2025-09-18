@@ -26,7 +26,7 @@
 .preview__main {
     display: flex;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     padding: 50px 200px 0 200px;
     gap: 20px;
@@ -35,7 +35,8 @@
 .preview__data {
     display: flex;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 900;
     justify-content: flex-end;
     padding: 0 180px 0 180px;
     text-align: center;
