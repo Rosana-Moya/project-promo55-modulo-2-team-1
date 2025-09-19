@@ -21,3 +21,4 @@ createButton.addEventListener("click", (e) => {
         console.error("Error creando la imagen:", err);
     });
 });
+
