@@ -38,6 +38,13 @@ previewMain.style.fontSize = localStorage.getItem("fontSize");
 preview.style.fontFamily = localStorage.getItem("fontFamily");
 preview.style.color = localStorage.getItem("fontColor");
 preview.style.backgroundImage = localStorage.getItem("selectedBackground");
+const savedPhoto = JSON.parse(localStorage.getItem("photoUp"));
+const renderPhoto = () => {
+    if (savedPhoto) {
+        photoUp.innerHTML = `<img src=${savedPhoto} alt="Imagen del usuario/a" class="photo-up__image">`
+    }
+};
+renderPhoto();
 
 inputName.addEventListener("input", (event) => {
     hostName.textContent = event.target.value;

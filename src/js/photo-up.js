@@ -3,7 +3,8 @@
 console.log("ready preview");
 
 const inputImg = document.querySelector(".js_input_file");
-const photoUp = document.querySelector(".photo-up__image");
+const photoUp = document.querySelector(".photo-up");
+
 console.log("inputImg", inputImg);
 console.log("photoUp", photoUp);
 
@@ -14,8 +15,8 @@ inputImg.addEventListener("change", (event) =>{
     const reader = new FileReader();
      reader.onload = function(e) {
       console.log("Imagen cargada:", e.target.result);
-      photoUp.src = e.target.result;
-      photoUp.style.display = 'block';  // Muestra la imagen en el preview
+      localStorage.setItem("photoUp", JSON.stringify(e.target.result));
+      photoUp.innerHTML = `<img src=${e.target.result} alt="Imagen del usuario/a" class="photo-up__image">`
     };
     
     reader.readAsDataURL(file);  // Lee el archivo como una URL de datos
