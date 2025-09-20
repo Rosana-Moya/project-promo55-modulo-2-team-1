@@ -6,8 +6,8 @@
 }
 
 .photo-up{
-width: 100px;
-height: 100px;
+width: 80px;
+height: 80px;
 position: absolute;
 top: 3px;
 left:3px;
@@ -59,4 +59,11 @@ flex : 1;
     justify-content: flex-end;
     padding: 0 180px 0 180px;
     text-align: center;
+}
+
+@media (min-width: 768px){
+  .photo-up{
+    width: 150px;
+    height: 150px;
+  }
 }
