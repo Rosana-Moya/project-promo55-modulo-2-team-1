@@ -36,12 +36,20 @@ collapsibleHeaders.forEach((header) => {
       const otherContent = otherHeader.nextElementSibling;
       if (otherHeader !== header) {
         otherHeader.classList.remove("active");
+        otherContent.style.maxHeight = null;
         otherContent.classList.remove("open");
       }
     });
 
     header.classList.toggle("active");
-    content.classList.toggle("open");
+
+    if (content.classList.contains("open")){
+        content.style.maxHeight = null;
+        content.classList.remove("open");
+    } else {
+        content.style.maxHeight = content.scrollHeight + 32 + "px";
+        content.classList.add("open");
+    }    
   });
 });
 
