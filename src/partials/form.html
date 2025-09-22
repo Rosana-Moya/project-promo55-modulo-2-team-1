@@ -1,47 +1,86 @@
 <!-- Sección: Rellena -->
 <section class="collapsible">
-  <button class="collapsible__header">Rellena <i class="fi fi-sr-angle-down"></i></button>
+  <button class="collapsible__header">
+    Rellena <i class="fi fi-sr-angle-down"></i>
+  </button>
   <div class="collapsible__content">
-    <form class="form">
+    <form class="form js-form-fillOut">
       <!-- Grupo: Nombre -->
       <div class="form__group">
         <label for="name" class="form__label">Nombre</label>
-        <input type="text" id="name" class="form__input" placeholder="¿Quién invita?" />
+        <input
+          type="text"
+          id="name"
+          class="form__input"
+          placeholder="¿Quién invita?"
+        />
       </div>
       <!-- Grupo: Mensaje -->
       <div class="form__group">
         <label for="message" class="form__label">Mensaje</label>
-        <textarea id="message" class="form__input" maxlength="200" placeholder="Te invito a..."></textarea>
+        <textarea
+          id="message"
+          class="form__input"
+          maxlength="200"
+          placeholder="Te invito a..."
+        ></textarea>
       </div>
 
       <!-- Grupo: Email -->
       <div class="form__group">
         <label for="email" class="form__label">Correo electrónico</label>
-        <input type="email" id="email" class="form__input" required placeholder="correo electrónico"/>
+        <input
+          type="email"
+          id="email"
+          class="form__input"
+          required
+          placeholder="correo electrónico"
+        />
       </div>
 
       <!-- Grupo: Teléfono -->
       <div class="form__group">
         <label for="phone" class="form__label">Teléfono</label>
-        <input type="tel" id="phone" class="form__input" placeholder="Número de telefono"/>
+        <input
+          type="tel"
+          id="phone"
+          class="form__input"
+          placeholder="Número de telefono"
+        />
       </div>
 
       <!-- Grupo: Fecha -->
       <div class="form__group">
         <label for="date" class="form__label">Fecha</label>
-        <input type="date" id="date" class="form__input" placeholder="Fecha del evento" />
+        <input
+          type="date"
+          id="date"
+          class="form__input"
+          placeholder="Fecha del evento"
+        />
       </div>
 
       <!-- Grupo: Dirección -->
       <div class="form__group">
         <label for="address" class="form__label">Dirección</label>
-        <input type="text" id="address" class="form__input" placeholder="Dirección del evento"/>
+        <input
+          type="text"
+          id="address"
+          class="form__input"
+          placeholder="Dirección del evento"
+        />
       </div>
 
       <!-- Grupo: Foto -->
       <div class="form__group">
         <label for="photo" class="form__label">Foto</label>
-        <input type="file" id="photo" class="form__input js_input_file" accept="image/*" placeholder="Añade una imagen" />
+        <input
+          type="file"
+          id="photo"
+          class="form__input js_input_file"
+          accept="image/*"
+          placeholder="Añade una imagen"
+        />
       </div>
     </form>
   </div>
@@ -49,8 +88,11 @@
 
 <!-- Sección: Diseña -->
 <section class="collapsible">
-  <button class="collapsible__header">Diseña <i class="fi fi-sr-angle-down"></i></button>
+  <button class="collapsible__header">
+    Diseña <i class="fi fi-sr-angle-down"></i>
+  </button>
   <div class="collapsible__content design">
+    <form class="form js-form-design">
     <!-- Estilo -->
     <div class="design__group">
       <label for="style" class="design__label">Elige un estilo</label>
@@ -102,9 +144,10 @@
       />
     </div>
     <div class="content__share">
-    <button class="share__button js-reset">Resetear</button>
+      <button type="button" class="share__button js-reset">Resetear</button>
     </div>
-</div>
+</form>
+  </div>
 </section>
 
 <!-- Sección: Comparte -->

@@ -1,6 +1,6 @@
 "use strict";
 
-console.log(">> Ready :)");
+console.log(">> Ready form :)");
 
 // ------------------------------
 // ELEMENTOS DOM
@@ -19,11 +19,14 @@ const inputDate = document.getElementById("date");
 const inputAddress = document.getElementById("address");
 const inputPhoto = document.getElementById("photo");
 const styleSelect = document.getElementById("style");
+const backgroundsContainer = document.querySelector(".js-backgrounds");
 
 // Sección de compartir
-const downloadButton = document.querySelector(".js-download");
+const downloadButton = document.querySelector(".js-download"); // Hay que borrarlo?
 const resetButton = document.querySelector(".js-reset");
 const formSubmitButton = document.querySelector(".js-create");
+const formRellena = document.querySelector(".js-form-fillOut");
+const formDiseña = document.querySelector(".js-form-design");
 
 // ------------------------------
 // TOGGLE DE COLAPSABLES
@@ -43,13 +46,13 @@ collapsibleHeaders.forEach((header) => {
 
     header.classList.toggle("active");
 
-    if (content.classList.contains("open")){
-        content.style.maxHeight = null;
-        content.classList.remove("open");
+    if (content.classList.contains("open")) {
+      content.style.maxHeight = null;
+      content.classList.remove("open");
     } else {
-        content.style.maxHeight = content.scrollHeight + 32 + "px";
-        content.classList.add("open");
-    }    
+      content.style.maxHeight = content.scrollHeight + 32 + "px";
+      content.classList.add("open");
+    }
   });
 });
 
@@ -65,6 +68,9 @@ const formData = {
   address: "",
   photo: "",
   style: "",
+  font: "",
+  fontSize: "",
+  fontColor: "",
   background: "",
 };
 
@@ -81,8 +87,6 @@ const inputMap = {
   photo: document.getElementById("photo"),
   style: document.getElementById("style"),
 };
-
-const backgroundsContainer = document.querySelector(".js-backgrounds");
 
 // ------------------------------
 // FONDOS POR ESTILO
@@ -136,8 +140,84 @@ function updateBackgrounds() {
 }
 
 // ------------------------------
+// RESET FORMULARIO
+// ------------------------------
+
+resetButton.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  console.log("Antes de reset", {
+    style: styleSelect.value,
+    font: document.querySelector(".js-font").value,
+    fontSize: document.querySelector(".js-font-size").value,
+    fontColor: document.querySelector(".js-font-color").value,
+  });
+
+  formRellena.reset();
+  formDiseña.reset();
+
+  // Vaciar inputs de rellena y la preview de rellena
+  inputName.value = "";
+  inputMessage.value = "";
+  inputDate.value = "";
+  inputEmail.value = "";
+  inputPhone.value = "";
+  inputAddress.value = "";
+  hostName.textContent = "";
+  message.textContent = "";
+  eventDate.textContent = "";
+  hostMail.textContent = "";
+  hostPhone.textContent = "";
+  hostAddress.textContent = "";
+
+  if (inputPhoto) inputPhoto.value = "";
+  if (backgroundsContainer) backgroundsContainer.innerHTML = "";
+
+  Object.keys(formData).forEach((key) => (formData[key] = ""));
+  formData.font = "Nunito";
+  formData.fontSize = "12";
+  formData.fontColor = "#000000";
+  formData.style = "";
+  formData.background = "";
+  formData.background = "";
+
+  localStorage.clear();
+
+//   localStorage.removeItem("hostName");
+//   localStorage.removeItem("message");
+//   localStorage.removeItem("eventDate");
+//   localStorage.removeItem("hostMail");
+//   localStorage.removeItem("hostPhone");
+//   localStorage.removeItem("hostAddress");
+//   localStorage.removeItem("fontSize");
+//   localStorage.removeItem("fontFamily");
+//   localStorage.removeItem("fontColor");
+//   localStorage.removeItem("selectedBackground");
+//   localStorage.removeItem("photoUp");
+
+  emitData();
+
+  previewMain.style.fontSize = formData.fontSize + "px";
+  preview.style.fontFamily = formData.font;
+  preview.style.color = formData.fontColor;
+  preview.style.backgroundImage = "";
+  photoUp.innerHTML = "";
+
+  console.log("Después de reset:", {
+    style: styleSelect.value,
+    font: document.querySelector(".js-font").value,
+    fontSize: document.querySelector(".js-font-size").value,
+    fontColor: document.querySelector(".js-font-color").value,
+  });
+
+  console.log("Formulario reseteado y emitido:", formData);
+});
+
+// ------------------------------
 // EMITIR DATOS A PREVIEW
 // ------------------------------
 function emitData() {
-  document.dispatchEvent(new CustomEvent("formDataUpdated", { detail: formData }));
+  document.dispatchEvent(
+    new CustomEvent("formDataUpdated", { detail: formData })
+  );
 }
