@@ -22,7 +22,6 @@ const styleSelect = document.getElementById("style");
 const backgroundsContainer = document.querySelector(".js-backgrounds");
 
 // Sección de compartir
-const downloadButton = document.querySelector(".js-download"); // Hay que borrarlo?
 const resetButton = document.querySelector(".js-reset");
 const formSubmitButton = document.querySelector(".js-create");
 const formRellena = document.querySelector(".js-form-fillOut");
@@ -182,18 +181,6 @@ resetButton.addEventListener("click", (event) => {
   formData.background = "";
 
   localStorage.clear();
-
-//   localStorage.removeItem("hostName");
-//   localStorage.removeItem("message");
-//   localStorage.removeItem("eventDate");
-//   localStorage.removeItem("hostMail");
-//   localStorage.removeItem("hostPhone");
-//   localStorage.removeItem("hostAddress");
-//   localStorage.removeItem("fontSize");
-//   localStorage.removeItem("fontFamily");
-//   localStorage.removeItem("fontColor");
-//   localStorage.removeItem("selectedBackground");
-//   localStorage.removeItem("photoUp");
 
   emitData();
 
