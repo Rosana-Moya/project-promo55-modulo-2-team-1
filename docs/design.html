@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>invite ME!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="./images/favicon_inviteme2.png" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <script type="module" crossorigin src="./assets/main-d202fab7.js"></script>
+    <script type="module" crossorigin src="./js/main.js"></script>
+    <link rel="stylesheet" href="./assets/main-e4669d7c.css">
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="hero__header">
+  <div class="header__content">
+    <span class="header__icon">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <rect x="5" y="12" width="30" height="18" rx="4" fill="#fff" stroke="#2A7C7C" stroke-width="2"/>
+        <polyline points="5,12 20,25 35,12" fill="none" stroke="#2A7C7C" stroke-width="2"/>
+        <path d="M20 17 l5-5 a3 3 0 0 0-5-4 a3 3 0 0 0-5 4 z" fill="#e67c2f" stroke="#2A7C7C" stroke-width="1"/>
+        <!-- Corazón en el sobre -->
+        <path d="M20 17
+        m-2 0
+        a2 2 0 0 1 4 0
+        q0 2-2 4
+        q-2-2-2-4
+        a2 2 0 0 1 4 0" 
+        fill="#2A7C7C"/>
+    </svg>
+    </span>
+    <h1 class="hero__title">Invite ME!</h1>
+  </div>
+  <p class="header__desc">
+    Diseña invitaciones únicas y creativas para tus eventos
+  </p>
+</header>
+      <!-- Sección: Rellena -->
+<section class="collapsible">
+  <button class="collapsible__header">
+    Rellena <i class="fi fi-sr-angle-down"></i>
+  </button>
+  <div class="collapsible__content">
+    <form class="form js-form-fillOut">
+      <!-- Grupo: Nombre -->
+      <div class="form__group">
+        <label for="name" class="form__label">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          class="form__input"
+          placeholder="¿Quién invita?"
+        />
+      </div>
+      <!-- Grupo: Mensaje -->
+      <div class="form__group">
+        <label for="message" class="form__label">Mensaje</label>
+        <textarea
+          id="message"
+          class="form__input"
+          maxlength="200"
+          placeholder="Te invito a..."
+        ></textarea>
+      </div>
+
+      <!-- Grupo: Email -->
+      <div class="form__group">
+        <label for="email" class="form__label">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          class="form__input"
+          required
+          placeholder="correo electrónico"
+        />
+      </div>
+
+      <!-- Grupo: Teléfono -->
+      <div class="form__group">
+        <label for="phone" class="form__label">Teléfono</label>
+        <input
+          type="tel"
+          id="phone"
+          class="form__input"
+          placeholder="Número de telefono"
+        />
+      </div>
+
+      <!-- Grupo: Fecha -->
+      <div class="form__group">
+        <label for="date" class="form__label">Fecha</label>
+        <input
+          type="date"
+          id="date"
+          class="form__input"
+          placeholder="Fecha del evento"
+        />
+      </div>
+
+      <!-- Grupo: Dirección -->
+      <div class="form__group">
+        <label for="address" class="form__label">Dirección</label>
+        <input
+          type="text"
+          id="address"
+          class="form__input"
+          placeholder="Dirección del evento"
+        />
+      </div>
+
+      <!-- Grupo: Foto -->
+      <div class="form__group">
+        <label for="photo" class="form__label">Foto</label>
+        <input
+          type="file"
+          id="photo"
+          class="form__input js_input_file"
+          accept="image/*"
+          placeholder="Añade una imagen"
+        />
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Sección: Diseña -->
+<section class="collapsible">
+  <button class="collapsible__header">
+    Diseña <i class="fi fi-sr-angle-down"></i>
+  </button>
+  <div class="collapsible__content design">
+    <form class="form js-form-design">
+    <!-- Estilo -->
+    <div class="design__group">
+      <label for="style" class="design__label">Elige un estilo</label>
+      <select id="style" class="design__select">
+        <option value="">-- Selecciona --</option>
+        <option value="boda">Boda</option>
+        <option value="cumple">Cumpleaños</option>
+        <option value="networking">Networking</option>
+      </select>
+    </div>
+
+    <!-- Fondos -->
+    <div class="design__group">
+      <span class="design__label">Fondos disponibles</span>
+      <div class="design__backgrounds js-backgrounds"></div>
+    </div>
+
+    <!-- Tipografía -->
+    <div class="design__group">
+      <label for="font" class="design__label">Tipografía</label>
+      <select id="font" class="design__select js-font">
+        <option value="Nunito">Nunito</option>
+        <option value="Dancing Script">Dancing Script</option>
+        <option value="Roboto">Roboto</option>
+      </select>
+    </div>
+
+    <!-- Tamaño texto -->
+    <div class="design__group">
+      <label for="fontSize" class="design__label">Tamaño texto</label>
+      <input
+        type="range"
+        id="fontSize"
+        min="9"
+        max="24"
+        value="12"
+        class="js-font-size"
+      />
+    </div>
+
+    <!-- Color texto -->
+    <div class="design__group">
+      <label for="fontColor" class="design__label">Color texto</label>
+      <input
+        type="color"
+        id="fontColor"
+        value="#000000"
+        class="js-font-color"
+      />
+    </div>
+    <div class="content__share">
+      <button type="button" class="share__button js-reset">Resetear</button>
+    </div>
+</form>
+  </div>
+</section>
+
+<!-- Sección: Comparte -->
+
+
+<!-- Vista previa -->
+
+      <section class="preview-section">
+    <div class="preview">
+
+        <div class="preview__main">
+            <p class="preview-main__host-name"></p>
+            <p class="preview-main__message"></p>
+        </div>
+        <div class="preview__data">
+            <p class="preview__event-date"></p>
+            <p class="preview__mail"></p>
+            <p class="preview__phone"></p>
+            <p class="preview__address"></p>
+        </div>
+        <div class="photo-up"></div>
+    
+    </div>
+    
+</section>
+        <div class="content__share">
+    <button type="submit" class="share__button js-create">Crear tarjeta</button>
+  </div>
+
+
+      <footer class="footer">
+  <div class="footer__top">
+    <span class="footer__brand">Invite ME!</span>
+    <span class="footer__copyright">© 2025 Invite ME!</span>
+  </div>
+
+  <div class="footer__team">
+    <div class="team-member">
+      <span>Rosana</span>
+      <div class="social-icons">
+        <a href="https://github.com/Rosana-Moya" target="_blank" title="GitHub Rosana">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <span>Tania</span>
+      <div class="social-icons">
+        <a href="https://github.com/Tasac-sainz" target="_blank" title="GitHub Tania">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <span>Karen</span>
+      <div class="social-icons">
+        <a href="https://github.com/Karengonsan" target="_blank" title="GitHub Karen">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <span>Michelle</span>
+      <div class="social-icons">
+        <a href="https://github.com/Michelle-1982" target="_blank" title="GitHub Michelle">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+    </div>
+    
+  </body>
+</html>
